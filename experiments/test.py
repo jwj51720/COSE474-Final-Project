@@ -3,8 +3,8 @@ import numpy as np
 
 
 def inference(config, model, testloader):
-    class_correct = list(0.0 for i in range(10))
-    class_total = list(0.0 for i in range(10))
+    class_correct = list(0.0 for _ in range(10))
+    class_total = list(0.0 for _ in range(10))
     total_correct = 0
     total_samples = 0
     val_scores = []
