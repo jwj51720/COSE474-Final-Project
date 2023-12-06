@@ -9,5 +9,6 @@
     "classes": ["plane", "car", "bird", "cat", "deer", "dog", "frog", "horse", "ship", "truck"],
     "model": "resnet",
     "new_model_flag": false,
-    "method": "pp"
+    "method": "pp",
+    "save_path": "./checkpoint"
 }
