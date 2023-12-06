@@ -1,3 +1,7 @@
+import sys
+
+sys.path.append("../")
+
 import torch
 import numpy as np
 import json
@@ -5,6 +9,7 @@ from pathlib import Path
 from collections import OrderedDict
 from layers import ResNet, BasicBlock, BottleNeck, NewModel
 import torchvision.models as models
+import torchvision.transforms as transforms
 
 
 def set_seed(seed):
@@ -48,3 +53,15 @@ def load_model(config):
         print("new model!")
         model = NewModel(config, model)
     return model.to(config["device"])
+
+
+def img_transform():
+    transform = transforms.Compose(
+        [
+            transforms.RandomHorizontalFlip(),
+            transforms.RandomVerticalFlip(),
+            transforms.ToTensor(),
+            transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
+        ]
+    )
+    return transform
