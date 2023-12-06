@@ -1,5 +1,6 @@
 import torch
 import numpy as np
+from tqdm import tqdm
 
 
 def inference(config, model, testloader):
@@ -8,9 +9,9 @@ def inference(config, model, testloader):
     total_correct = 0
     total_samples = 0
     val_scores = []
-
+    print(f"**Inference**")
     with torch.no_grad():
-        for data in testloader:
+        for data in tqdm(testloader):
             images, labels = data
             images, labels = images.to(config["device"]), labels.to(config["device"])
             outputs = model(images)
