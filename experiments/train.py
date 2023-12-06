@@ -12,7 +12,7 @@ def validation(config, model, validloader, criterion):
     model.eval()
     print("**validation**")
     valid_loss = 0
-    for i, data in enumerate(validloader):
+    for i, data in tqdm(enumerate(validloader)):
         images, labels = data
         images, labels = images.to(config["device"]), labels.to(config["device"])
         outputs = model(images)
@@ -65,11 +65,12 @@ def trainer(config, fold_loaders, model, writer, criterion, optimizer, scheduler
         train_loss = total_loss / len(trainloader)
         val_loss, val_score = validation(config, model, validloader, criterion)
         if val_loss < min_val_loss:
+            print("New Minimum Valid Loss!")
             min_val_loss = val_loss
-            torch.save(model.state_dict(), "./current_best.pt")
-        print("Train CrossEntropy Loss: ", train_loss)
-        print("Valid CrossEntropy Loss: ", val_loss)
-        print("Valid Overall Accuracy: ", val_score)
+            torch.save(model.state_dict(), f"{config['save_path']}/current_best.pt")
+        print("- Train CrossEntropy Loss: ", train_loss)
+        print("- Valid CrossEntropy Loss: ", val_loss)
+        print("- Valid Overall Accuracy: ", val_score)
         writer.add_scalar("Train/Loss", train_loss, global_step=epoch)
         writer.add_scalar("Valid/Loss", val_loss, global_step=epoch)
         writer.add_scalar("Valid/Score", val_score, global_step=epoch)
