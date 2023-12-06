@@ -2,13 +2,13 @@
     "epochs": 100,
     "batch_size": 512,
     "test_batch_size": 128,
-    "tensorboard_path": "experiment_new_model",
+    "tensorboard_path": "./tensorboard",
     "seed": 917,
     "learning_rate": 0.001,
     "num_workers": 2,
     "classes": ["plane", "car", "bird", "cat", "deer", "dog", "frog", "horse", "ship", "truck"],
-    "model": "resnet",
-    "new_model_flag": false,
+    "model": "resnet18",
+    "new_model_flag": true,
     "method": "pp",
-    "save_path": "./checkpoint"
+    "save_path": "./outputs"
 }
