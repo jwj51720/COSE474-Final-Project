@@ -10,9 +10,9 @@ Many real-world problems consist of multiple classes, and there are areas like h
 
 ## Results
 <p align="center">
-  <img src="https://github.com/jwj51720/COSE474-Final-Project/assets/104672441/a2d92278-ec7e-4b17-9ea9-de65ee6d27b9" width="300" style="display:inline-block; margin: 0 auto;">
-  <img src="https://github.com/jwj51720/COSE474-Final-Project/assets/104672441/0e472529-b4af-409a-9f24-896cbab07102" width="300" style="display:inline-block; margin: 0 auto;">
-  <img src="https://github.com/jwj51720/COSE474-Final-Project/assets/104672441/6dce6155-1afa-4c25-a39d-5fca13cad2f1" width="300" style="display:inline-block; margin: 0 auto;">
+  <img src="https://github.com/jwj51720/COSE474-Final-Project/assets/104672441/a2d92278-ec7e-4b17-9ea9-de65ee6d27b9" width="280" style="display:inline-block; margin: 0 auto;">
+  <img src="https://github.com/jwj51720/COSE474-Final-Project/assets/104672441/0e472529-b4af-409a-9f24-896cbab07102" width="280" style="display:inline-block; margin: 0 auto;">
+  <img src="https://github.com/jwj51720/COSE474-Final-Project/assets/104672441/6dce6155-1afa-4c25-a39d-5fca13cad2f1" width="280" style="display:inline-block; margin: 0 auto;">
 </p>
 
 ## How To Run
